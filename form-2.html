@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script type="text/javascript">
+    function add(){
+      
+      var n1=document.getElementById("n1").value;  
+      var n2=document.getElementById("n2").value;
+      var total = parseInt(n1) + parseInt(n2)
+      
+      
+      alert(total);
+    }
+    function mul(){
+      
+      var n1=document.getElementById("n1").value;  
+      var n2=document.getElementById("n2").value;
+      var multi = parseInt(n1) * parseInt(n2)
+      
+      
+      alert(multi);
+      
+    }
+     function sub(){
+      
+      var n1=document.getElementById("n1").value;  
+      var n2=document.getElementById("n2").value;
+      var subs = parseInt(n1)- parseInt(n2)
+      
+      
+      
+      alert(subs);
+      
+    }
+    function div(){
+      
+      var n1=document.getElementById("n1").value;  
+      var n2=document.getElementById("n2").value;
+      var division = parseInt(n1) / parseInt(n2)
+      
+      
+      alert(division);
+      
+    }
+  </script>
+</head>
+<body>
+  
+  <form>
+    Enter Number
+    <input type="number" id="n1" name="n1" /></br>
+    Enter Number
+  <input type="number" id="n2" name="n2" /></br>
+  <input type="button" value="Add" onclick="add()"/>
+  <input type="button" value="Mul" onclick="mul()"/>
+  <input type ="button" value ="div" onclick="div()"/>
+ <input type ="button" value ="sub" onclick="sub()"/>
+  </form>
+  
+
+</body>
+</html>

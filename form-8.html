@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script>
+    function showMe(){
+      
+      var myFirstName=document.getElementById("first-name").value;
+      alert("ur name is"+myFirstName);
+      var myEmail=document.getElementById("Email").value;
+      alert(myEmail);
+      var myAge=document.getElementById("age").value;
+      alert(myAge);
+      var myLastName=document.getElementById("last-name").value;
+      alert(myLastName)
+      
+      
+     
+    }
+  </script>
+</head>
+
+<body>
+
+<form >
+FirstName:
+<input type ="text" id = "first-name"/ >
+
+
+LastName:
+<input type ="text" id ="last-name"/>
+  <br>
+
+
+Email:
+<input type ="email" id ="email"/>
+
+
+Age:
+<input type="number" id ="number">
+  <br>
+
+
+<input type="reset" value ="reset"/>
+
+<input type = "submit" value="submit" onclick="showMe()"/>
+</form>
+
+</body>
+</html>

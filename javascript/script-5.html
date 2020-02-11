@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script type="text/javascript">
+    function myWork(){
+      //
+      var numArray = new Array();
+	  
+	  for(var i = 0; i < 20; i++){
+		if(i % 2 != 0){
+			numArray.push(i);
+		}
+	  }
+      
+      
+      alert(numArray);
+      //suming
+      var sum = 0;  
+
+	  for(var i = 0; i < numArray.length; i++){
+		sum = sum + numArray[i]
+	  }
+      
+      alert("sum is " + sum);
+    
+    }
+  </script>
+</head>
+<body>
+    <input type="button" value="submit" onclick="myWork();"/>
+</body>
+</html>

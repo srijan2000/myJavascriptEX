@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script>
+    function showMe(){
+      var myFruit = document.getElementById("my-apple").checked;
+      if(myFruit == true){
+        alert("My apple has been selected " );
+      }
+      
+      var myFruit = document.getElementById("my-orange").checked;
+      if(myFruit == true){
+        alert("My orange has been selected ");
+      }
+    }
+  </script>
+</head>
+<body>
+  <form>
+    Apple:
+  <input type="radio" id="my-apple" name="fruit" />
+    orange:
+    <input type="radio" id="my-orange" name="fruit"/>
+    
+    
+  
+  <input type="button" value="show" onclick="showMe()"/>
+   <input type="reset" value="Reset"/>
+  </form>
+</body>
+</html>

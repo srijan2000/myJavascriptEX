@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script>
+    function showMe(){
+      var myapple = document.getElementById("my-apple").checked;
+      alert("My apple has been selected " + myapple);
+      var myorange = document.getElementById("my-orange").checked;
+      alert("My orange has been selected "+ myorange);
+    }
+  </script>
+</head>
+<body>
+  <form>
+    Apple
+ 
+  <input type="checkbox" id="my-apple"  />
+    orange
+    <input type="checkbox" id="my-orange"/>
+    
+  
+  <input type="button" value="show" onclick="showMe()"/>
+   <input type="reset" value="Reset"/>
+  </form>
+</body>
+</html>

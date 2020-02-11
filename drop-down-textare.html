@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script>
+      function showMe(){
+        var myTA = document.getElementById("my-textarea").value;
+        //alert(myTA);
+        if(myTA.trim() == ""){
+          alert("Please enter description.");
+          return;
+        }
+        
+        var course = document.getElementById("my-course").value;
+        if(course == ""){
+          alert("Please select course.");
+          return;
+        }
+        alert("selected course, " + course);
+       alert("form is submitted."); 
+      }
+  </script>
+</head>
+<body>
+  Description:</br>
+  <textarea id="my-textarea" rows="10" cols="50"></textarea>
+  </br>
+Course:</br>
+<select id="my-course">
+  <option value="">Select One</option>
+  <option value="civil">Civil</option> 
+  <option value="mechanical">Mechanical</option>
+  <option value="electrical">Electrical</option>
+  <option value="computer science" >Computer Science</option>
+</select>
+</br></br>
+  <input type="button" value="Add" onclick="showMe()"/>
+  
+  
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script>
+    function showMe(){
+      var myEmail = document.getElementById("my-email").value;
+      alert("My email " + myEmail);
+    }
+  </script>
+</head>
+<body>
+  <form>
+ 
+  <input type="email" id="my-email" />
+  
+  <input type="button" value="show" onclick="showMe()"/>
+   <input type="reset" value="Reset"/>
+  </form>
+</body>
+</html>

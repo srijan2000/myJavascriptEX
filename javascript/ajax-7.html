@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>				
+		function loadDoc() {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			  document.getElementById("demo").innerHTML = this.responseText;
+			}
+		  };
+		  xhttp.open("GET", "ajax_info.txt", true);
+		  xhttp.send();
+		}
+	</script>
+</head>
+<body>
+
+<div style="margin:3px">
+<p>UNIT-III 
+Introduction to Java script, Java Script and Forms Variables, Functions, Operators, Conditional Statements and Loops, 
+Arrays DOM, Strings, Event and Event Handling, Java Script Closures. Introduction to Ajax, Pre-Ajax Java Script Communication Techniques, 
+XML HTTP Request Object, Data Formats, Security Concerns, User Interface Design for Ajax. Introduction to Python, Objects and Methods, 
+Flow of Control, Dynamic Web Pages. 
+UNIT-IV 
+Java Servlets: Java Servlets and CGI Programming, Benefits of Java Servlet, Life Cycle of Java Servlet, 
+Reading data from client, HTTP Request Header, HTTP Response Header, working with Cookies, Tracking Sessions. 
+Java Server Pages: Introduction to JSP, JSP Tags, Variables and Objects, Methods, Control Statements, Loops,
+ Request String, User Sessions, Session Object, Cookies.  
+UNIT-V 
+Introduction to PHP: Overview of PHP, General Syntactic Characteristics, Primitives, Operations, Expressions,
+ Control Statements, Arrays, Functions, Pattern matching, Form handling, Files, Cookies, Session Tracking.
+ Database access through Web: Architectures for Database Access- Database access with Perl - Database access with PHP-Database access with JDBC. 
+ </p>
+</div>
+<div id="demo">
+	<h1>The XMLHttpRequest Object</h1>
+	<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+</body>
+</html>

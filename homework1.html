@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script>
+    function showMe(){
+      
+      var firstName = document.getElementById("first-name").value;
+      if( firstName == "" ){
+        alert("please enter first name");
+        return;
+      }
+      var lastName = document.getElementById("last-name").value;
+      if(lastName== ""){
+        alert("pls enter last name");
+        return;
+      }
+      var email = document.getElementById("email").value;
+      if(email== ""){
+        alert("pls enter email address");
+        return;
+      }
+      var age = document.getElementById("age").value;
+      
+      if(age==""){
+        alert("pls enter age");
+        return;
+      }
+      
+      alert("form is submitted.");
+      
+      
+    }
+  </script>
+</head>
+<body>
+  
+  First Name:
+  <input type="text" id="first-name"/></br>
+  Last Name:
+  <input type="text" id="last-name"/></br>
+  Email :
+  <input type="email" id="email"/></br>
+  Age  :
+  <input type="number" id="age"/></br>
+  
+
+  
+  <input type="button" value="submit" onclick="showMe()"/>
+  
+  
+  
+
+</body>
+</html>
