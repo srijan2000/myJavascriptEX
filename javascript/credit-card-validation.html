@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Validating credit card number</title>
+        <script> 
+            function creditCardValidation(){
+                var cardNumber = document.getElementById("credit-card-number").value;
+                //alert(cardNumber);
+                //("^[0-9]{16}$")
+                //will match a non-empty contiguous string of digits, i.e. a non-empty line that is composed of nothing but digits. 
+                var pattern = new RegExp("^[0-9]{16}$");
+                var isValid = pattern.test(cardNumber);
+                if(isValid){
+                    alert("Credit Card length is VAlid.");
+                }else{
+                    alert("Credit Card length is not VAlid.");
+                }
+
+                var luhnCheck = validateLuhnAlgorith(cardNumber);
+                if(luhnCheck){
+                    alert("Given number is a credit card");
+                }else{
+                    alert("Given number is not a credit card");
+                }
+
+            }
+            //Luhn algorithm to check given number is a Credit card number
+            function validateLuhnAlgorith(cn){
+                var sum = 0;
+                for (var i = 0; i < cn.length; i++) {
+                    var intVal = parseInt(cn.substr(i, 1));
+                    if (i % 2 == 0) {
+                        intVal *= 2;
+                        if (intVal > 9) {
+                            intVal = 1 + (intVal % 10);
+                        }
+                    }
+                    sum += intVal;
+                }
+                return (sum % 10) == 0;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Credit Card Validation.</h1>
+        <form action="">
+            <label for="credit-card-number">Enter Card Number</label>
+            <input type="text" name="credit-card-number" id="credit-card-number">
+            <button type="submit" onclick="creditCardValidation()">Validate</button>
+        </form>
+    </body>
+</html>
